@@ -31,6 +31,11 @@
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
 
         <EditText
             android:id="@+id/tx_email"
@@ -79,64 +84,73 @@
             android:textSize="21sp"
             android:textStyle="bold"
             />
+        </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:backgroundTint="#3F51B5"
-            android:background="#3F51B5">
+
+            android:layout_gravity="center">
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:src="@drawable/facebook"
-                android:contentDescription="Facebook logo" />
+                android:contentDescription="Facebook logo"
+                android:layout_marginRight="10dp"/>
+
             <Button
                 android:id="@+id/bt_facebook"
-                android:layout_width="220dp"
+                android:layout_width="236dp"
                 android:layout_height="match_parent"
+                android:backgroundTint="#3F51B5"
                 android:text="Continue with Facebook"
                 android:textAlignment="center"
-                android:textAllCaps="false"
-                android:backgroundTint="#3F51B5"
-                />
+                android:textAllCaps="false" />
         </LinearLayout>
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:backgroundTint="#3F51B5"
-            android:layout_marginTop="10dp"
-            >
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/google"
-                android:backgroundTint="#3F51B5"
-                android:background="#3F51B5"
-                android:contentDescription="Google logo" />
-            <Button
-                android:id="@+id/bt_google"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Continue with Google"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:backgroundTint="#3F51B5"
-                android:background="#3F51B5"
-                />
-        </LinearLayout>
-        <TextView
-            android:id="@+id/tx_terms"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="By continuing, you agree to Pinterest's Terms of Service, Privacy Policy"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center"
+            >
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/google"
+                android:contentDescription="Google logo"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/bt_google"
+                android:layout_width="236dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="#3F51B5"
+                android:text="Continue with Google"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/tx_terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="By continuing, you agree to Pinterest's Terms of Service, Privacy Policy"
             android:textStyle="bold"
-            />
+            android:layout_marginBottom="10dp"/>
         <View
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="1dp"
             android:visibility="visible"
+            android:layout_gravity="center"
+            android:background="#808080"
             />
         <TextView
             android:id="@+id/tx_signup"
@@ -146,8 +160,7 @@
             android:layout_gravity="center"
             android:textStyle="bold"
             />
-
-
+    </LinearLayout>
     </LinearLayout>
 
 
