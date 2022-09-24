@@ -2,6 +2,7 @@ package com.example.loginpage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,17 +13,21 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     EditText tx_email;
     EditText tx_password;
+    EditText tx_otp;
     Button bt_login;
 
     String mail = "musa";
     String pass1 = "12345";
+    int otp = 2132;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tx_email = findViewById(R.id.tx_email);
         tx_password = findViewById(R.id.tx_password);
+        tx_otp = findViewById(R.id.tx_otp);
         bt_login = findViewById(R.id.bt_login);
     }
 
@@ -35,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 String email = tx_email.getText().toString();
                 String password = tx_password.getText().toString();
 
-                if (email.equals(mail) && password.equals(pass1)){
+                if (email.equals(mail) && password.equals(pass1) && (tx_otp == )){
                     Intent intent = new Intent(MainActivity.this,Welcome.class);
                     startActivity(intent);
                 } else {
