@@ -39,10 +39,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String email = tx_email.getText().toString();
                 String password = tx_password.getText().toString();
+                int otpCheck = Integer.parseInt(tx_otp.getText().toString());
 
-                if (email.equals(mail) && password.equals(pass1) && (tx_otp == )){
-                    Intent intent = new Intent(MainActivity.this,Welcome.class);
-                    startActivity(intent);
+                if (email.equals(mail) && password.equals(pass1) ){
+                    if (otpCheck == otp){
+                        Intent intent = new Intent(MainActivity.this,Welcome.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(MainActivity.this, "OTP wrong", Toast.LENGTH_SHORT).show();
+                    }
+
                 } else {
                     Toast.makeText(MainActivity.this, "Incorrect Credentials please", Toast.LENGTH_SHORT).show();
                 }
